@@ -39,19 +39,7 @@ if __name__ == '__main__':
     #print(commits[0])
     #print(commits[1]['author'])
     #print(len(commits))
-    
-    listaParaGerarCsv = []
-    d = 0
-    while d < len(commits):
-        listaInterna = []
-        listaInterna.append(details[1].stip()["author"])
-        d = d + 1
-        
-        listaParaGerarCsv.append(listaInterna)
-       
-    
-    with open("output", 'wb') as csvfile:
-        spamwriter = csv.writer(csvfile, delimiter='|', quoting=csv.QUOTE_MINIMAL)
-        spamwriter.writerow(['vai'])
-        for linha in listaParaGerarCsv:
-           spamwriter.writerow(linha)   
+    i=0
+    while i< len(commits):
+        print (commits[1])
+        i= i+1
