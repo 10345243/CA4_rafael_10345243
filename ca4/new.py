@@ -49,7 +49,7 @@ while True:
         current_commit.author = details[1].strip()
         current_commit.date = details[2].strip().split(' ')[0]
         current_commit.time = details[2].strip().split(' ') [1]
-        current_commit.day = details[2].strip().split(' ')[3][1:4]
+        current_commit.day = details[2].strip().split(' ')[2][1:4]
 		#current_commit.comment_line_count = int(details[3].strip().split(' ')[0])
         #current_commit.changes = data[index+2:data.index('',index+1)]
         #print(current_commit.changes)
@@ -59,9 +59,23 @@ while True:
     except IndexError:
         break
 
+
+if author > len(commits):
+    print current_commit.author
+else:
+    print 'none'  
+        
 print(len(commits))
 
 commits.reverse()
+
+
+
+
+
+
+
+
 
 #for index, commit in enumerate(commits):
  #   print(commit.get_commit_comment())
